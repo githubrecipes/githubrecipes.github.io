@@ -53,7 +53,7 @@
 <li>Teaspoon-&gt;tea</li>
 <li>Pounds-&gt;lbs</li>
 </ul></li>
-<li>For items like vegetables/fruits use; [1-4]x format.</li>
+<li>For items like vegetables/fruits; use [1-4]x format.</li>
 <li>Use units that can be inferred from packaging;</li>
 <li>Avoid unit conversion from those listed on packaging
 <ul>
@@ -66,16 +66,15 @@
 </ul></li>
 </ul>
 <h3 id="directions">Directions</h3>
-<p>Use numbered lists for directions either manually (1., 2., etc) or with pandoc ssyntax ((@), (@), etc.). + If a direction uses multiple ingredients note each one on a separate sub-bullet like; + Mix * Onions * Cheese * Etc. + If a direction + For temperatures default to Fahrenheit temperatures * Bold all preheating instructions * Bold temperatures and cooking times using the double asterik (**<em>) </em> Eg: Cook at <strong>350F</strong> for <strong>4 hours</strong></p>
+<p>Use numbered lists for directions either manually (1., 2., etc) or with pandoc syntax ((@), (@), etc.). + If a direction uses multiple ingredients note each one on a separate sub-bullet like; + Mix * Onions * Cheese * Etc. + If a direction + For temperatures default to Fahrenheit temperatures * Bold all preheating instructions * Bold temperatures and cooking times using the double asterik (**<em>) </em> Eg: Cook at <strong>350F</strong> for <strong>4 hours</strong></p>
 <h3 id="metadata">Metadata</h3>
 <p>These metadata tags are used to generate the index pages for each subdirectory. It is important they are included at the top of the file in the same format laid out in the template and below!!!</p>
-<p>Required:</p>
+<p>Only the first four are required. The rest are not currently used but maybe in the future.</p>
 <pre><code>---
 author: &lt;persons name&gt;
 title: &lt;the title to be used on the index page&gt;
 prep: &lt;prep time for the recipe&gt;
 cook: &lt;cook time for the recipe&gt;
-optional: &lt;you can use your own the following are things i will probably use in some way in the future&gt;
 serves: &lt;how many servings recommended amounts creates&gt;
 cal: &lt;calories for recipe&gt;
 socialmedia: &lt;link to be included if twitter intergration is implemented&gt;
