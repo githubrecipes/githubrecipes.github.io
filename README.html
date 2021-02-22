@@ -68,9 +68,23 @@
 <h3 id="directions">Directions</h3>
 <p>Use numbered lists for directions either manually (1., 2., etc) or with pandoc ssyntax ((@), (@), etc.). + If a direction uses multiple ingredients note each one on a separate sub-bullet like; + Mix * Onions * Cheese * Etc. + If a direction + For temperatures default to Fahrenheit temperatures * Bold all preheating instructions * Bold temperatures and cooking times using the double asterik (**<em>) </em> Eg: Cook at <strong>350F</strong> for <strong>4 hours</strong></p>
 <h3 id="metadata">Metadata</h3>
-<p>These meta data tags are used to generate the index pages for each subdirectory. It is important they are included. In order for them to be detected the need to be in between the colon (<code>:</code>) and the semicolon (<code>;</code>).</p>
-<p>Required (currently the only ones used): * <code>AUTHOR:&lt;persons name&gt;;</code> * <code>TITLE:&lt;the title to be used on the index page;</code> * <code>PREP:&lt;prep time for the recipe&gt;;</code> * <code>COOK:&lt;cook time for the recipe&gt;;</code></p>
-<p>Optional (to be implemented): * <code>SERVES:&lt;how many servings recommended amounts creates&gt;;</code> * <code>CAL:&lt;calories for recipe&gt;;</code> * <code>SOCIALMEDIA:&lt;link to be included if twitter intergration is implemented&gt;;</code> * <code>CREDIT:&lt;link to adapted recipe&gt;;</code> * <code>BAKE:&lt;bake time (set and forget til timer)&gt;;</code></p>
+<p>These metadata tags are used to generate the index pages for each subdirectory. It is important they are included at the top of the file in the same format laid out in the template and below!!!</p>
+<p>Required:</p>
+<pre><code>---
+author: &lt;persons name&gt;
+title: &lt;the title to be used on the index page&gt;
+prep: &lt;prep time for the recipe&gt;
+cook: &lt;cook time for the recipe&gt;
+optional: &lt;you can use your own the following are things i will probably use in some way in the future&gt;
+serves: &lt;how many servings recommended amounts creates&gt;
+cal: &lt;calories for recipe&gt;
+socialmedia: &lt;link to be included if twitter intergration is implemented&gt;
+credit: &lt;link to adapted recipe&gt;
+bake: &lt;bake time (set and forget til timer)&gt;
+...</code></pre>
+<p>Note that there has to be a space after the colon (:) You can use the defined metadata (<code>%title%</code> will be replace with whatever the contents of the variable is) later on in the file like shown in <code>applepie.md</code>.</p>
+<p>The replacement is a bit fussy;</p>
+<p><code>Prep: %prep%</code> works while <code>Prep:%prep%</code> does not</p>
 <h2 id="writing-your-own">Writing your own</h2>
 <ol type="1">
 <li><p>Create a <a href="https://github.com/githubrecipes/recipes/new/main">new file</a></p></li>
