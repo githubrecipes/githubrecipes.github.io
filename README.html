@@ -25,7 +25,7 @@
 <ul>
 <li>No fluff
 <ul>
-<li>If you feel compelled to add something extraneous to the recipe keep it within the <code>noprint</code> section</li>
+<li>If you feel compelled to add something extraneous to the recipe keep it within the <code>noprint</code> section.</li>
 </ul></li>
 <li>Unambiguous directions
 <ul>
@@ -44,8 +44,8 @@
 </ul></li>
 </ul>
 <h2 id="style-guide">Style guide</h2>
-<ul>
-<li>Use markdown tables for ingredient lists.
+<h3 id="ingredient-list">Ingredient List</h3>
+<p>Use the markdown table format as seen in the <code>template.md</code> file.</p>
 <ul>
 <li>Approved unit abbreviations
 <ul>
@@ -53,7 +53,7 @@
 <li>Teaspoon-&gt;tea</li>
 <li>Pounds-&gt;lbs</li>
 </ul></li>
-<li>For items like vegetables/fruits use; <number>x format.</li>
+<li>For items like vegetables/fruits use; [1-4]x format.</li>
 <li>Use units that can be inferred from packaging;</li>
 <li>Avoid unit conversion from those listed on packaging
 <ul>
@@ -64,58 +64,32 @@
 <ul>
 <li>1/2 cup not 0.5 cups</li>
 </ul></li>
-</ul></li>
-<li>Use numbered lists for directions
-<ul>
-<li>If a direction uses multiple ingredients note each one on a separate sub-bullet like;</li>
-<li>Mix
-<ul>
-<li>Onions</li>
-<li>Cheese</li>
-<li>Etc.</li>
-</ul></li>
-<li>If a direction</li>
-<li>For temperatures default to Fahrenheit temperatures
-<ul>
-<li>Bold all preheating instructions</li>
-<li>Bold temperatures and cooking times using the asterik (*)
-<ul>
-<li>Eg: Cook at <strong>350F</strong> for <strong>4 hours</strong></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>Metadata
-<ul>
-<li>The most important ones are the
-<ul>
-<li><code>AUTHOR</code></li>
-<li><code>TITLE</code></li>
-<li><code>PREP</code></li>
-<li><code>COOK</code></li>
-</ul></li>
-<li>These meta data tags are used to generate the index pages for each subdirectory. It is important they are included.</li>
-<li>In order for them to be detected the need to be in between the colon and the semicolon.</li>
-</ul></li>
 </ul>
+<h3 id="directions">Directions</h3>
+<p>Use numbered lists for directions either manually (1., 2., etc) or with pandoc ssyntax ((@), (@), etc.). + If a direction uses multiple ingredients note each one on a separate sub-bullet like; + Mix * Onions * Cheese * Etc. + If a direction + For temperatures default to Fahrenheit temperatures * Bold all preheating instructions * Bold temperatures and cooking times using the double asterik (**<em>) </em> Eg: Cook at <strong>350F</strong> for <strong>4 hours</strong></p>
+<h3 id="metadata">Metadata</h3>
+<p>These meta data tags are used to generate the index pages for each subdirectory. It is important they are included. In order for them to be detected the need to be in between the colon (<code>:</code>) and the semicolon (<code>;</code>).</p>
+<p>Required (currently the only ones used): * <code>AUTHOR:&lt;persons name&gt;;</code> * <code>TITLE:&lt;the title to be used on the index page;</code> * <code>PREP:&lt;prep time for the recipe&gt;;</code> * <code>COOK:&lt;cook time for the recipe&gt;;</code></p>
+<p>Optional (to be implemented): * <code>SERVES:&lt;how many servings recommended amounts creates&gt;;</code> * <code>CAL:&lt;calories for recipe&gt;;</code> * <code>SOCIALMEDIA:&lt;link to be included if twitter intergration is implemented&gt;;</code> * <code>CREDIT:&lt;link to adapted recipe&gt;;</code> * <code>BAKE:&lt;bake time (set and forget til timer)&gt;;</code></p>
 <h2 id="writing-your-own">Writing your own</h2>
 <ol type="1">
-<li>Create a <a href="https://github.com/githubrecipes/recipes/new/main">new file</a></li>
-<li>At the top of the page select the most appropriate folder and the name of the file.
+<li><p>Create a <a href="https://github.com/githubrecipes/recipes/new/main">new file</a></p></li>
+<li><p>At the top of the page select the most appropriate folder and the name of the file.</p>
 <ul>
 <li>The filename should be descriptive while short.</li>
 </ul></li>
-<li>Copy the <a href="https://raw.githubusercontent.com/githubrecipes/recipes/main/template.md">template</a> into the file</li>
-<li>Starting editing! Using the above style guide!</li>
-<li>Once you are satisfied (don’t worry you can edit it later) scroll to the bottom of the page and Select <code>Create a new branch for this commit and start a pull request</code>.</li>
-<li>Click <code>Propose new file</code>!</li>
-<li>Wait patiently for the PR to be approved</li>
+<li><p>Copy the <a href="https://raw.githubusercontent.com/githubrecipes/recipes/main/template.md">template</a> into the file</p></li>
+<li><p>Starting editing! Using the above style guide!</p></li>
+<li><p>Once you are satisfied (don’t worry you can edit it later) scroll to the bottom of the page and Select</p>
+<p><code>Create a new branch for this commit and start a pull request</code>.</p></li>
+<li><p>Click <code>Propose new file</code>!</p></li>
+<li><p>Wait patiently for the PR to be approved</p></li>
 </ol>
 <p>You can also edit the file locally if you don’t like the github editor.</p>
 <p>If you want to preview how the file is going to look when published check out the <a href="#Development"><code>Development</code></a> section below.</p>
 <p>You can create your own folder and file using the github.com interface. Only create your own folder if your recipe doesn’t fall into the other categories.</p>
-<p>You can use any markdown feature that <code>pandoc</code> supports however I would say simpler is better.</p>
-<p><strong>Anything</strong> that is not the ingredient list or direction list <strong>must</strong> be inside the <code>&lt;div class="noprint"&gt;</code> which <strong>must</strong> be found at the bottom of the file.</p>
-<p>As you may have guessed from the class name, anything found in this section of the page will not show up when the user goes to print the recipe.</p>
+<p><strong>Anything</strong> that is not the ingredient list or direction list <strong>must</strong> be inside the <code>&lt;div class="noprint"&gt;</code> which <strong>must</strong> be found at the bottom of the file. As you may have guessed from the class name, anything found in this section of the page will not show up when the user goes to print the recipe.</p>
+<h2 id="legality">Legality</h2>
 <p>If you are adapting a recipe from one found online or in a cookbook/ on packaging <strong>you must</strong> include the original source it was adapted/inspired by.</p>
 <p>From <a href="https://www.copyright.gov/circs/circ33.pdf">copyright.gov’s circular 33</a>:</p>
 <pre><code>A recipe is a statement of the ingredients and procedure required for making a dish of food. A mere
@@ -124,7 +98,15 @@ listing of ingredients or contents, or a simple set of directions, is uncopyrigh
 <h2 id="your-style-guide-is-dumbmakes-no-sense">Your style guide is dumb/makes no sense</h2>
 <p>Open a PR/issue suggesting changes and reasons why.</p>
 <h2 id="development">Development</h2>
-<p>To build the website locally: 1. Clone this repo <code>git clone https://github.com/githubrecipes/recipes.git</code> 2. Install <a href="https://pandoc.org/installing.html"><code>pandoc</code></a> 3. If you use <a href="https://www.sublimetext.com/3">sublime text 3</a> you can open the folder as a project and just build (<code>Ctrl+b</code>) individual files. 4. To build the file you’re working on locally; <code>pandoc -s --css=styling.css --to=html5 &lt;input_file&gt; -o &lt;output_file&gt;</code> 5. Open the file in your web browser of choice.</p>
+<p>To build the website locally: 1. Clone this repo</p>
+<pre><code>`git clone https://github.com/githubrecipes/recipes.git`</code></pre>
+<ol start="2" type="1">
+<li><p>Install <a href="https://pandoc.org/installing.html"><code>pandoc</code></a></p></li>
+<li><p>If you use <a href="https://www.sublimetext.com/3">sublime text 3</a> you can open the folder as a project and just build (<code>Ctrl+b</code>) individual files.</p></li>
+<li><p>To build the file you’re working on locally;</p>
+<p><code>pandoc -s --css=styling.css --to=html5 &lt;input_file&gt; -o &lt;output_file&gt;</code></p></li>
+<li><p>Open the file in your web browser of choice.</p></li>
+</ol>
 <p>Be sure that the repo is up-to-date as it will be using the local version of the CSS file.</p>
 <h2 id="css-source">CSS source</h2>
 <p>CSS has been adapted from <a href="https://benjam.info/panam/">Pan Am: <em>Simple CSS for Pandoc</em></a></p>
