@@ -24,16 +24,16 @@
 <h1 class="title">Title</h1>
 <p class="author">Author</p>
 </header>
-<h1 id="title-author-prep-prep-cook-cook"><span>Title</span> | <span>Author</span> | Prep: <span>Xmin</span> | Cook: <span>Yhr</span></h1>
+<h1 id="title-author-prep-xmin-cook-yhr">Title | Author | Prep: Xmin | Cook: Yhr</h1>
 <div class="container">
-<section id="directions" class="sidebyside">
+<section id="directions" class="directions">
 <h2>Directions</h2>
 <ol class="example" type="1">
 <li>Use this format for numbered instructions</li>
-<li>The table tags make the ingredient list and directions appear side by side.</li>
+<li>The container and side-by-side macros make the ingredient list and directions appear side by side.</li>
 </ol>
 </section>
-<section id="ingredients" class="sidebyside">
+<section id="ingredients" class="ingredients">
 <h2>Ingredients</h2>
 <table>
 <thead>
@@ -73,9 +73,11 @@
 </table>
 </section>
 </div>
-<div class="noprint">
-<pre><code>anything within this area will not show up when the user prints the recipe</code></pre>
-<h2 id="adapted-from-all-recipes">Adapted from: <a href="https://www.allrecipes.com/recipe/9487/pecan-pie/">All Recipes</a></h2>
+<section id="adapted-from-all-recipes" class="noprint">
+<h2>Adapted from: <a href="credit%20url">All Recipes</a></h2>
+<div class="footer">
+<p><a href="https://github.com/githubrecipes/recipes">Make your own</a> | <a href="https://github.com/githubrecipes/githubrecipes.github.io/tree/main/template.html">HTML source</a> | <a href="https://github.com/githubrecipes/recipes/tree/main/template.md">markdown source</a> | <a href="index.html">More Recipes</a></p>
 </div>
+</section>
 </body>
 </html>

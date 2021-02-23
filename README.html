@@ -49,9 +49,9 @@
 <ul>
 <li>Approved unit abbreviations
 <ul>
-<li>Tablespoon-&gt;table</li>
-<li>Teaspoon-&gt;tea</li>
-<li>Pounds-&gt;lbs</li>
+<li><code>Tablespoon -&gt; table</code></li>
+<li><code>Teaspoon -&gt; tea</code></li>
+<li><code>Pounds -&gt; lbs</code></li>
 </ul></li>
 <li>For items like vegetables/fruits; use [1-4]x format.</li>
 <li>Use units that can be inferred from packaging;</li>
@@ -81,9 +81,9 @@ socialmedia: &lt;link to be included if twitter intergration is implemented&gt;
 credit: &lt;link to adapted recipe&gt;
 bake: &lt;bake time (set and forget til timer)&gt;
 ...</code></pre>
-<p>Note that there has to be a space after the colon (:) You can use the defined metadata (<code>%title%</code> will be replace with whatever the contents of the variable is) later on in the file like shown in <code>applepie.md</code>.</p>
+<p>Note that there has to be a space after the colon (:) You can use the defined metadata (<code>&lt;the title to be used on the index page&gt;</code> will be replace with whatever the contents of the variable is) later on in the file like shown in <code>applepie.md</code>.</p>
 <p>The replacement is a bit fussy;</p>
-<p><code>Prep: %prep%</code> works while <code>Prep:%prep%</code> does not</p>
+<p><code>Prep: &lt;prep time for the recipe&gt;</code> works while <code>Prep:&lt;prep time for the recipe&gt;</code> does not</p>
 <h2 id="writing-your-own">Writing your own</h2>
 <ol type="1">
 <li><p>Create a <a href="https://github.com/githubrecipes/recipes/new/main">new file</a></p></li>
@@ -127,10 +127,16 @@ listing of ingredients or contents, or a simple set of directions, is uncopyrigh
 <p>I’ll eventually add something that minimizes the CSS in the github action before committing to pages repo.</p>
 <h2 id="todo">TODO</h2>
 <ol type="1">
-<li>Minimize css for committing to pages repo</li>
+<li>Minimize CSS for committing to pages repo</li>
+<li>Favicon/icon for github recipes</li>
 <li>Github action to build PR files so people can preview what it will look like</li>
 <li>Metadata system</li>
 <li>Twitter posting when new item added.</li>
+<li>Main index page</li>
+<li>Titles on index pages!</li>
+<li>Back links</li>
+<li>“up in the file tree” links IE clicking this on the pecan pie page brings you back to desserts</li>
+<li>View source function on each web page</li>
 </ol>
 </body>
 </html>
