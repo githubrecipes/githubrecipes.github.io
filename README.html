@@ -12,6 +12,7 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="https://githubrecipes.com/styling.css" />
   <!--[if lt IE 9]>
@@ -69,21 +70,19 @@
 <p>Use numbered lists for directions either manually (1., 2., etc) or with pandoc syntax ((@), (@), etc.). + If a direction uses multiple ingredients note each one on a separate sub-bullet like; + Mix * Onions * Cheese * Etc. + If a direction + For temperatures default to Fahrenheit temperatures * Bold all preheating instructions * Bold temperatures and cooking times using the double asterik (**<em>) </em> Eg: Cook at <strong>350F</strong> for <strong>4 hours</strong></p>
 <h3 id="metadata">Metadata</h3>
 <p>These metadata tags are used to generate the index pages for each subdirectory. It is important they are included at the top of the file in the same format laid out in the template and below!!!</p>
-<p>Only the first four are required. The rest are not currently used but maybe in the future.</p>
+<p>Only the first five are required. The rest are not currently used but maybe in the future.</p>
 <pre><code>---
 author: &lt;persons name&gt;
 title: &lt;the title to be used on the index page&gt;
+credit: &lt;link to adapted recipe&gt;
 prep: &lt;prep time for the recipe&gt;
 cook: &lt;cook time for the recipe&gt;
 serves: &lt;how many servings recommended amounts creates&gt;
 cal: &lt;calories for recipe&gt;
 socialmedia: &lt;link to be included if twitter intergration is implemented&gt;
-credit: &lt;link to adapted recipe&gt;
 bake: &lt;bake time (set and forget til timer)&gt;
 ...</code></pre>
-<p>Note that there has to be a space after the colon (:) You can use the defined metadata (<code>&lt;the title to be used on the index page&gt;</code> will be replace with whatever the contents of the variable is) later on in the file like shown in <code>applepie.md</code>.</p>
-<p>The replacement is a bit fussy;</p>
-<p><code>Prep: &lt;prep time for the recipe&gt;</code> works while <code>Prep:&lt;prep time for the recipe&gt;</code> does not</p>
+<p>You can use the defined metadata (<code>&lt;the title to be used on the index page&gt;</code> will be replace with whatever the contents of the variable is) later on in the file like shown in <code>applepie.md</code>.</p>
 <h2 id="writing-your-own">Writing your own</h2>
 <ol type="1">
 <li><p>Create a <a href="https://github.com/githubrecipes/recipes/new/main">new file</a></p></li>
@@ -99,7 +98,7 @@ bake: &lt;bake time (set and forget til timer)&gt;
 <li><p>Wait patiently for the PR to be approved</p></li>
 </ol>
 <p>You can also edit the file locally if you don’t like the github editor.</p>
-<p>If you want to preview how the file is going to look when published check out the <a href="#Development"><code>Development</code></a> section below.</p>
+<p>If you want to preview exactly how the file is going to look when published check out the <a href="#Development"><code>Development</code></a> section below.</p>
 <p>You can create your own folder and file using the github.com interface. Only create your own folder if your recipe doesn’t fall into the other categories.</p>
 <p><strong>Anything</strong> that is not the ingredient list or direction list <strong>must</strong> be inside the <code>&lt;div class="noprint"&gt;</code> which <strong>must</strong> be found at the bottom of the file. As you may have guessed from the class name, anything found in this section of the page will not show up when the user goes to print the recipe.</p>
 <h2 id="legality">Legality</h2>
@@ -124,7 +123,6 @@ listing of ingredients or contents, or a simple set of directions, is uncopyrigh
 <h2 id="css-source">CSS source</h2>
 <p>CSS has been adapted from <a href="https://benjam.info/panam/">Pan Am: <em>Simple CSS for Pandoc</em></a></p>
 <p>You can open a PR in this Repo if you have any changes/suggestions for the CSS used by the website.</p>
-<p>I’ll eventually add something that minimizes the CSS in the github action before committing to pages repo.</p>
 <h2 id="todo">TODO</h2>
 <ol type="1">
 <li>Minimize CSS for committing to pages repo</li>
@@ -132,10 +130,6 @@ listing of ingredients or contents, or a simple set of directions, is uncopyrigh
 <li>Github action to build PR files so people can preview what it will look like</li>
 <li>Metadata system</li>
 <li>Twitter posting when new item added.</li>
-<li>Main index page</li>
-<li>Titles on index pages!</li>
-<li>Back links</li>
-<li>“up in the file tree” links IE clicking this on the pecan pie page brings you back to desserts</li>
 <li>View source function on each web page</li>
 </ol>
 </body>
